@@ -1,0 +1,110 @@
+/**
+body{
+	margin: 15px 15px 30px 15px;
+	background-color: orange;
+}
+button {
+	background-color: green;
+	padding: 10px 5px 10px 5px;
+	font-size: 100%;
+	width: 340px;
+	height: 60px;
+}
+
+#ask {
+	background-color: red;
+}
+
+#answer {
+	background-color: green;
+}
+
+#groups {
+	background-color: purple;	
+}
+
+#home {
+	background-color: blue;	
+}
+
+#help {
+	background-color: yellow;
+}
+
+#about {
+	background-color: yellow;
+}
+
+a {
+	text-decoration: none;
+}
+
+.linkdiv {
+  	width: 95%;
+	height: 50px;
+	font-size: 24px;
+	text-align: center;
+	padding: 20px;
+	margin: 10px;
+	color: white;
+}
+
+.linkdivHalf {
+  	width: 30%;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+	margin: 10px;
+	color: white;
+}
+
+#join {
+	float: left;
+	width: 40%;
+}
+
+#create {
+	width: 40%;
+}
+
+#joinGroup {
+	background-color: green;
+}
+
+#createGroup {
+	background-color: red;
+}
+
+nav{
+	margin:0;
+	overflow: hidden;
+}
+
+nav ul {
+	margin:0;
+	padding:0;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	
+	background-color: #00b3b3;
+}
+
+.navbar {
+	background-color: #00b3b3;
+}
+**/
+
+#add-group-btn {
+	background-color: #1E90FF;
+	margin-left:10px;
+}
+
+#join-group-btn {
+	background-color: #9932CC;
+	float: right;
+}
+

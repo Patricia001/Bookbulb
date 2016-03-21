@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" type = "text/css" href = "css/jqmobile/jquery.mobile-1.4.5.min.css">
+        <!--link rel= "stylesheet" type = "text/css" href = "css/hello.css"-->
+         <link rel="stylesheet" type="text/css" href="css/home.css">
+          <script type="text/javascript" src="lib/jquery-mobile/js/jquery-1.11.0.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile-router/js/jquery.mobile.router.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
+
+        
+        <title>Menu</title>
+    </head>
+
+    <body style="background-color:white">
+    <div data-role="page">
+      <div data-role="header" class="ui-bar-e" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+          	<ul>
+          		<li><a href="home.html" data-icon="home">Home</a></li>
+          		<li><a href="groups.html" data-icon="grid">Groups</a></li>
+              <li><a href="ask.html" data-icon="search">Ask</a></li>
+              <li><a href="answers.html" data-icon="star">Answers</a></li>
+          	</ul>
+          </div>
+        </div>
+        <h1 style="text-align:center">Home</h1>
+    	<!--Main Content-->
+    	<div role="main">
+    		<h2>Hello <span id="user_firstname"></span></h2>
+    		<a href="pallone.html" class="buttonLink">Pallone</a>
+    		<a href="biology.html" class="buttonLink">Biology</a>
+    		</br>Can someone explain gene regulation?
+    		</br>Posted by Zac Efron 2 min ago</br> 
+    		<button class="answerItBtn">Answer it!</button>
+    		<hr>
+    		<a href="Kwong.html" class="button buttonLink">Kwong</a>
+    		<a href="Algebra.html" class="button buttonLink">Algebra</a>
+    		</br>What's the difference between sequence and series?
+    		</br>Posted by Zachary Gordon 4 min ago</br> 
+    		<button class="answerItBtn" style="background-color:red;">Answer it!</button>
+    		<a href="Algebra.html" class="buttonLink button">Algebra</a>
+    		</br>Can someone help me with this problem? If Kacy bought 60 watermelons and ate 2, how many watermelons
+    		does she have? Thank you in advance!
+    		</br>Posted by Amanda Palmer 10 min ago</br> 
+    		<button class="answerItBtn">Answer it!</button>
+    		<!--button id="palloneBtn" type="button">Pallone</button> <button href="bio.html" type="button">Bio</button>
+    		<p>Can someone explaine gene regulation?</p>
+    		<br> 
+    		<p>Posted by Zac Efron</p> <button>Answer it!</button> <p>2 min ago</p-->
+    	</div>
+    	<!--Start of FOOTER-->
+    	<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">
+    			<ul>
+    				<li><a href="help.html">Help</a></li>
+    				<li><a href="about.html">About</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<!--End of FOOTER-->
+    </div>
+			
+    			<script type="text/javascript" src="cordova.js"></script>
+    			<script type="text/javascript" src="lib/fastclick/js/fastclick.js"></script>
+    	<script type="text/javascript">
+        helloApp.app.initialize();
+        </script>
+			
+    	
+        
+    </body>
+</html>

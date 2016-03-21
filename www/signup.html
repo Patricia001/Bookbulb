@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+                <meta name="google-signin-client_id" content="952461575072-q0c43jb188ielopuhbpgun21gsn61l2p.apps.googleusercontent.com">
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jqmobile/jquery.mobile.square.css" />
+        <script type="text/javascript" src="lib/jquery-mobile/js/jquery-1.11.0.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile-router/js/jquery.mobile.router.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <title>Sign Up
+        </title>
+        </head>
+    <body style="background-color:white">
+      <div data-role="page" id="home">
+        <div data-role="header" class="ui-bar-b" data-position="fixed">
+			Logo of bookbulb
+        </div>
+    
+    <div role="main" class="ui-content ui-padding">
+    		<form name="signup" id="signupForm">
+    			<input type="text" placeholder="First name" id="firstname"/>
+    			<input type="text" placeholder="Last name" id="lastname"/>
+    			<input type="email" placeholder="Email Address" id="email"/>
+    			<input type="password" placeholder="Password" id="password"/>
+    			<fieldset data-role="controlgroup">
+    				<input type="checkbox" name="math" id="math"/>
+    				<label for="math">Math</label>
+    				<input type="checkbox" name="science" id="science"/>
+    				<label for="science">Science</label>
+    				<input type="checkbox" name="English" id="English"/>
+    				<label for="English">English</label>
+    				<input type="checkbox" name="history" id="history"/>
+    				<label for="history">History</label>
+    			</fieldset>
+    			<button type="submit" class="ui-btn ui-btn-c">Sign Up for BookBulb (it's free!)</button>
+    		</form>
+				
+    	</div>
+
+        <div data-role="footer" class="ui-bar-d" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+          	<ul>
+          		<li><a href="home.html" data-icon="home">Help</a></li>
+              <li><a href="groups.html" data-icon="star">About</a></li>
+          	</ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Groups -->
+      <div data-role="page" id="groups">
+        <div data-role="header" class="ui-bar-c" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="#groups" data-icon="grid">Groups</a></li>
+              <li><a href="#ask" data-icon="search">Ask</a></li>
+              <li><a href="#answers" data-icon="star">Answers</a></li>
+            </ul>
+          </div>
+        </div>
+         <!-- Content -->
+
+        <div data-role="footer" class="ui-bar-d" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+              <li><a href="home.html" data-icon="home">Help</a></li>
+              <li><a href="groups.html" data-icon="star">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ask -->
+      <div data-role="page" id="ask">
+        <div data-role="header" class="ui-bar-d" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="#groups" data-icon="grid">Groups</a></li>
+              <li><a href="#ask" data-icon="search">Ask</a></li>
+              <li><a href="#answers" data-icon="star">Answers</a></li>
+            </ul>
+          </div>
+        </div>
+         <!-- Content -->
+         <div role="main">
+          <textarea data-corners="false" class="textarea ui-input-text ui-shadow-inset ui-body-inherit ui-textinput-autogrow" rows="8" name="ask_textarea" id="ask_textarea" placeholder="Ask your question here!"></textarea>
+          <a href="#" id="take_picture" class="ui-btn ui-icon-camera ui-btn-icon-left ui-shadow ui-corner-all">Take Picture</a>
+      	</div>
+
+        <div data-role="footer" class="ui-bar-d" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+              <li><a href="home.html" data-icon="home">Help</a></li>
+              <li><a href="groups.html" data-icon="star">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/fastclick/js/fastclick.js"></script>
+        <script type="text/javascript">
+        helloApp.app.initialize();
+        </script>
+    </body>
+</html>

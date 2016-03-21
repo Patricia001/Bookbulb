@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      
+ 		<meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jqmobile/jquery.mobile.square.css" />
+        <script type="text/javascript" src="lib/jquery-mobile/js/jquery-1.11.0.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile-router/js/jquery.mobile.router.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <title>Menu</title>
+    </head>
+    <body>
+    <div data-role="page">
+    	<div data-role="header" class="ui-bar-a" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+          	<ul>
+          		<li><a href="home.html" data-icon="home">Home</a></li>
+          		<li><a href="groups.html" data-icon="grid">Groups</a></li>
+              <li><a href="ask.html" data-icon="search">Ask</a></li>
+              <li><a href="answers.html" data-icon="star">Answers</a></li>
+          	</ul>
+          </div>
+        </div>
+        <h1 style="text-align:center">My Groups</h1>
+    	<!--Main Content-->
+    	<div role="main">
+    		<div class="group-btn">
+    		<a href="add-group.html" id="add-group-btn" class="ui-btn ui-btn-inline">Add Group</a>
+    		<a href="join-group.html" id="join-group-btn" class="ui-btn ui-btn-inline">Join Group</a>
+    		</div>
+    		<ul data-role="listview">
+    			<!--li data-role="list-divider">Recent Groups</li-->
+    			<li><a href="#">Pallone Biology</a></li>
+    			<li><a href="#">9th Grade Math</a></li>
+    			<!--li data-role="list-divider">No Activity</li-->
+    			<li><a href="#">Geology</a></li>
+    			<li data-role="list-divider">Suggested Groups</li>
+    			<li><a href="#">9th Grade Students</a></li>
+    			<li><a href="#">Lynbrook Students</a></li>
+    		</ul>
+    	</div>
+    	<!--Start of FOOTER-->
+    	<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">
+    			<ul>
+    				<li><a href="help.html">Help</a></li>
+    				<li><a href="about.html">About</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<!--End of FOOTER-->
+    </div>
+			
+    			<script type="text/javascript" src="cordova.js"></script>
+    			<script type="text/javascript" src="js/index.js"></script>
+			
+    	
+        
+    </body>
+</html>
+
+<!--html>
+
+<head>
+	<title>Groups</title>
+    <link rel= "stylesheet" type= "text/css" href= "css/grid/normalize.css">
+	<link rel= "stylesheet" type= "text/css" href= "css/grid/skeleton.css">
+    <link rel= "stylesheet" type = "text/css" href = "css/hello.css">
+     <link rel= "stylesheet" type = "text/css" href = "css/groupsCSS.css">
+</head>
+
+<body>
+<div class="navbar">
+    		<header>
+    			<ul>
+    				<li> <a class="button" href="index.html">Home</a></li>
+    				<li>Groups</li>
+    				<li>Ask</li>
+					<li>Answer</li>
+				</ul>
+    	 	</header>
+    	 </div>
+	<div class="container">
+    		<div class="row">
+    			<div class="six columns">
+    			<div id = "joinGroup" class="linkdivHalf" id="join">Join</div>
+    			<div id = "createGroup" class="linkdivHalf" id="create">Create</div>
+    			</div>
+    			<h2> My Groups </h2>
+    		</div>
+    </div>
+</body>
+</html-->

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jqmobile/jquery.mobile.square.css" />
+        <script type="text/javascript" src="lib/jquery-mobile/js/jquery-1.11.0.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile-router/js/jquery.mobile.router.min.js"></script>
+      	<script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <title>Menu</title>
+    </head>
+
+    <body>
+    <div data-role="page">
+      <div data-role="header" class="ui-bar-e" data-position="fixed">
+          <div data-role="navbar" data-iconpos="bottom">
+          	<ul>
+          		<li><a href="home.html" data-icon="home">Home</a></li>
+          		<li><a href="groups.html" data-icon="grid">Groups</a></li>
+              <li><a href="ask.html" data-icon="search">Ask</a></li>
+              <li><a href="answers.html" data-icon="star">Answers</a></li>
+          	</ul>
+          </div>
+        </div>
+        <h1 style="text-align:center">Ask your question here</h1>
+        <h2>A Few Bookbulb Rules: </h2>
+        <h4 style="padding-left: 25%;">1. Ask for help and explanation, but not direct answers. Homework is not about writing down answers. It's about learning. </h4>
+        <h4>         2. Be respectful to the people who are trying to help you. </h4>
+        <h4>         3. Do not use Bookbulb on a test. </h4>
+        <h4>         4. Do not share any private information </h4>
+    
+    	<!--Main Content-->
+    	<div role="main">
+    		<div id="received_messages">
+    		</div>
+    		<input type="text" name="question_message" id="question_message" placeholder="Send your question">
+    		<button id="send_question">Post Question</button>
+    	</div>
+    	<!--Start of FOOTER-->
+    	<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">
+    			<ul>
+    				<li><a href="help.html">Help</a></li>
+    				<li><a href="about.html">About</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<!--End of FOOTER-->
+    </div>
+			
+    			<script type="text/javascript" src="cordova.js"></script>
+			    <script type="text/javascript" src="lib/fastclick/js/fastclick.js"></script>
+        <script type="text/javascript">
+        helloApp.app.initialize();
+        </script>
+    	
+        
+    </body>
+</html>

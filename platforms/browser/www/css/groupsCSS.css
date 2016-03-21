@@ -1,0 +1,49 @@
+body{
+	margin: 15px 5px 5px 5px;
+	background-color: white;
+}
+
+.linkdivHalf {
+  	width: 32%;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+	margin: 10px;
+	color: white;
+}
+
+#join {
+	float: left;
+	width: 40%;
+}
+
+#create {
+	width: 40%;
+}
+
+#joinGroup {
+	float: left;
+	background-color: green;
+}
+
+#createGroup {
+	float: right;
+	background-color: red;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	width: 25%;
+	background-color: #00b3b3;
+}
+
+.navbar {
+	background-color: #00b3b3;
+}
+
+.group-btn{
+	width:50%;
+}
+
