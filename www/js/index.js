@@ -47,9 +47,11 @@ helloApp.app = {
 		}
 	}
     
+    /*
     $("#signup").on("click",function(event) {
     	alert("Signup Button clicked");
     });
+    */
     
     // Sign Up Functionality
     $("#signupForm").on("submit",function(event) {
