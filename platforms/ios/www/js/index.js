@@ -4,6 +4,8 @@ helloApp.app = {
 	initialize: function() {
 		document.addEventListener('deviceready', this.onDeviceReady, false);
     // Write your jquery from here
+    var myDataRef = new Firebase('https://bookbulbtheapp.firebaseio.com/');
+    var userRef = myDataRef.child("users");
     $('#take_picture').on('click', function(event) {
       alert("camera is not active right now");
       /*if (!navigator.camera) {
@@ -31,28 +33,60 @@ helloApp.app = {
     	}
     });
     
+	function checkIfUserExists(email) {
+		var usersRef = new Firebase(USERS_LOCATION);
+		usersRef.child(email).once('value',function(snapshot) {
+			var exists = (snapshot.val() !== null);
+			userExistsCallback(userId, exists);
+		});
+	}
+	
+	function checkIfEmailExists(email,exists) {
+		if(!exists) {
+			alert(email + 'does not exist');
+		}
+	}
+    
+    $("#signup").on("click",function(event) {
+    	alert("Signup Button clicked");
+    });
+    
     // Sign Up Functionality
     $("#signupForm").on("submit",function(event) {
     	event.preventDefault();
+        alert(">>>>4444>>>");
     	var formData = $(this).serializeArray();
     	var email = $("#email").val();
     	var password = $("#password").val();
     	var firstname = $("#firstname").val();
-    	var lastname = $("#lastname").val();
     	var users = {};
-    	if (email && password && firstname && lastname) {
-    		users.id = 1;
-    		users.email = email;
-    		users.password = password;
-    		users.firstname = firstname;
-    		users.lastname = lastname;
-    		window.localStorage.setItem("users", JSON.stringify(users));
+    	if (email && password && firstname) {
+    		email = email.replace(".","");
+    		var ref = new Firebase("https://bookbulbtheapp.firebaseio.com/users/" + email);
+			ref.push({email: email, password: password, firstname: firstname});
     		window.location.href = "home.html";
- //   		window.location.href="#home";
     	} else {
     		alert("Please fill out all the form fields");
     	}
     });
+    
+    $("#login").on("click",function(event) {
+    		var email = $("#email").val();
+    		//email= email.replace(".",""); //firebase email
+    		var password = $("#password").val();
+    	if (email && password){
+    		var ref = new Firebase("https://bookbulbtheapp.firebaseio.com/users/" + email); //making call to Firebase API w/ specific email id entered by user
+    		ref.once("value",function(snap){
+    		//alert(snap.firstname);
+    		console.log(snap.key());
+			console.log(snap.val());    		
+    	});
+    } else {
+    	window.location.href = "signup.html";
+    }
+    	
+    });
+    
     
     if(localStorage.users) {
     	var users = JSON.parse(localStorage.getItems("users"));
