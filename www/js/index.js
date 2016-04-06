@@ -56,36 +56,47 @@ helloApp.app = {
     		//email= email.replace(".",""); //firebase email
     		var password = $("#password").val();
     	if (email && password){
-            console.log(">>>email>>password>>>", email, password);
-    		var ref = new Firebase("https://bookbulbtheapp.firebaseio.com/users/" + email); //making call to Firebase API w/ specific email id entered by user
-    		ref.once("value",function(snap){
-    		//alert(snap.firstname);
-    		console.log(snap.key());
-			console.log(snap.val());
-			    		
-			
+            // console.log(">>>email>>password>>>", email, password);
+            // var ref = new Firebase("https://bookbulbtheapp.firebaseio.com/users/" + email); //making call to Firebase API w/ specific email id entered by user
+            // ref.once("value",function(snap){
+            // //alert(snap.firstname);
+            // console.log(snap.key());
+			// console.log(snap.val());
+
 			var ref = new Firebase("https://bookbulbtheapp.firebaseio.com");
 			ref.authWithPassword({
-  					email    :  email,
-  					password :  password
-				}, function(error, authData) {
-  					if (error) {  //TODO ask teacher why failed. 
-  					             //treat as success, go to home page
-    					//alert("User name and password are incorrect");
-    					console.log("Login Failed!", error);
-    					window.location.href = "home.html";
-    					
-  				} else {
-    			    console.log("Authenticated successfully with payload:", authData);
-    			    window.location.href = "home.html";
-  				}
-			});    		
+				email    : email,
+				password : password
+			}, function(error, authData) {
+				if (error) {
+					console.log("Login Failed!", error);
+				} else {
+					window.location.href = "home.html";
+					console.log("Authenticated successfully with payload:", authData);
+				}
+			});
+
+			// ref.authWithPassword(
+			// 	{
+  			// 		email    :  email,
+  			// 		password :  password
+			// 	},
+			// 	function(error, authData) {
+  			// 		if (error) {  //TODO ask teacher why failed.
+  			// 		             //treat as success, go to home page
+    			// 		//alert("User name and password are incorrect");
+    			// 		console.log("Login Failed!", error);
+    			// 		window.location.href = "home.html";
+    			//
+  			// 	} else {
+    			//     console.log("Authenticated successfully with payload:", authData);
+    			//     window.location.href = "home.html";
+  			// 	}
+			// );
 			    		
-    	});
-    } else {
-    	window.location.href = "signup.html";
-    }
-    	
+    	} else {
+			alert("Please enter both username and password");
+        }
     });
 },
 	onDeviceReady: function() {
