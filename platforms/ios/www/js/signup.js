@@ -31,6 +31,14 @@ helloApp.app = {
 	onDeviceReady: function() {
 	
 	}
+	
+	/*
+	* This button currently does not work
+	
+	$("#goBack").click(function goBack() {
+		window.history.back();
+	})
+	*/
 };
 
 helloApp.app.initialize();

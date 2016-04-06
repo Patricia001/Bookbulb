@@ -3,9 +3,11 @@ var helloApp = {};
 helloApp.app = {
 	initialize: function() {
 		document.addEventListener('deviceready', this.onDeviceReady, false);
+		//alert("hello");
     // Write your jquery from here
     var myDataRef = new Firebase('https://bookbulbtheapp.firebaseio.com/');
     var userRef = myDataRef.child("users");
+
     $('#take_picture').on('click', function(event) {
       alert("camera is not active right now");
       /*if (!navigator.camera) {
@@ -46,32 +48,10 @@ helloApp.app = {
 			alert(email + 'does not exist');
 		}
 	}
-    
-    /*
-    $("#signup").on("click",function(event) {
-    	alert("Signup Button clicked");
-    });
-    */
-    
-    // Sign Up Functionality
-    $("#signupForm").on("submit",function(event) {
-    	event.preventDefault();
-        var formData = $(this).serializeArray();
-    	var email = $("#email").val();
-    	var password = $("#password").val();
-    	var firstname = $("#firstname").val();
-    	var users = {};
-    	if (email && password && firstname) {
-    		email = email.replace(".","");
-    		var ref = new Firebase("https://bookbulbtheapp.firebaseio.com/users/" + email);
-			ref.push({email: email, password: password, firstname: firstname});
-    		window.location.href = "home.html";
-    	} else {
-    		alert("Please fill out all the form fields");
-    	}
-    });
+
     
     $("#login").on("click",function(event) {
+    //alert("hello login");
     		var email = $("#email").val();
     		//email= email.replace(".",""); //firebase email
     		var password = $("#password").val();
@@ -107,14 +87,9 @@ helloApp.app = {
     }
     	
     });
-    
-    
-    if(localStorage.users) {
-    	var users = JSON.parse(localStorage.getItems("users"));
-    	alert(users.firstname);
-    }
 },
 	onDeviceReady: function() {
 		FastClick.attach(document.body);
   }
 };
+helloApp.app.initialize();
