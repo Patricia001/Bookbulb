@@ -7,34 +7,7 @@ helloApp.app = {
     // Write your jquery from here
     var myDataRef = new Firebase('https://bookbulbtheapp.firebaseio.com/');
     var userRef = myDataRef.child("users");
-
-    $('#take_picture').on('click', function(event) {
-      alert("camera is not active right now");
-      /*if (!navigator.camera) {
-        alert("Camera API not supported", "Error");
-        return;
-      }
-      var options = {
-        quality: 50,
-        destinationType: Camera.DestinationType.DATA_URL,
-        sourceType: 0,      // 0:Photo Library, 1=Camera, 2=Saved Album
-        encodingType: 0     // 0=JPG 1=PNG
-      }; */
-    });
-   
-    var botMessage = ["Hi, how can I help you", "No one available", "Sorry you are struggling"];
-    
-    $('#send_question').on('click',function(event) {
-    var itemFromBot = botMessage[Math.floower(Math.random()*botMessage.length)];
-    	var textMessage = $('#question_message').val();
-    	if(textMessage.length) {
-    		$('#received_messages').append('<p>'+textMessage) + '</p>';
-    		$('#received_messages p').last('p').append('<br>'+botMessage.random[itemFromBot] + '</br>');
-    	} else {
-    		alert("please type your message");
-    	}
-    });
-    
+		
 	function checkIfUserExists(email) {
 		var usersRef = new Firebase(USERS_LOCATION);
 		usersRef.child(email).once('value',function(snapshot) {

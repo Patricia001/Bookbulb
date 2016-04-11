@@ -8,73 +8,75 @@
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
         <script type="text/javascript" src="lib/jquery-mobile/js/jquery-1.11.0.min.js"></script>
       	<script type="text/javascript" src="lib/jquery-mobile-router/js/jquery.mobile.router.min.js"></script>
-      	<script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.0.min.js"></script>   
+      	<script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.0.min.js"></script>   \
 
         <title>Sign Up
         </title>
         </head>
     <body style="background-color:white">
-      <div data-role="page" id="signup">
+      <div data-role="page" id="signupPage">
         <div data-role="header" class="ui-bar-b" data-position="fixed">
 			<img id="logo" src="./images/lightbulb.png" width="250" height="280" alt="Logo" align="center"> </img>
         </div>
-	
-	<!--NO LONGER NEEDED (FOR NOW)
-    <div role="main" class="ui-content ui-padding">
-    		<form name="signup" id="signupForm">
-    			<input type="text" placeholder="First name" id="firstname"/>
-    			<input type="text" placeholder="Last name" id="lastname"/>
-    			<input type="email" placeholder="Email Address" id="email"/>
-    			<input type="password" placeholder="Password" id="password"/>
-    			<fieldset data-role="controlgroup">
-    				<input type="checkbox" name="math" id="math"/>
-    				<label for="math">Math</label>
-    				<input type="checkbox" name="science" id="science"/>
-    				<label for="science">Science</label>
-    				<input type="checkbox" name="English" id="English"/>
-    				<label for="English">English</label>
-    				<input type="checkbox" name="history" id="history"/>
-    				<label for="history">History</label>
-    			</fieldset>
-    			<button type="submit" class="ui-btn ui-btn-c">Sign Up</button>
-    		</form>
-				
-    	</div-->
-    	
-    	<h2>Welcome to Bookbulb!</h2>
-    	<p> We are a community of learners, eager to help each other with our 
-    	journey in education. </p>
-    	
+
+          <h2>Welcome to Bookbulb!</h2>
+          <p> We are a community of learners, eager to help each other with our
+              journey in education. </p>
+
     	<div role="main" class="ui-content ui-padding">
-    	<form name="signup" id="signupForm">
-    		<input type="text" placeholder="First Name" id="firstname"/>
-    		<input type="text" placeholder="Email" id="email"/>
-    		<input type="password" placeholder="Password" id="password"/>
-    		<button type="submit">Join the Community!</button>
-    	</form>
-    </div>
+    	    <form name="signup" id="signupForm">
+    		    <input type="text" placeholder="First Name" id="signupFirstname"/>
+    		    <input type="text" placeholder="Email" id="signupEmail"/>
+    		    <input type="password" placeholder="Password" id="signupPassword"/>
+    		    <button type="submit" id="signup" onclick="signupSubmit()">Join the Community!</button>
+    	    </form>
+        </div>
     
     <!--button id="goBack"> Go Back </button-->
     
     <button onclick="goBack()">Go Back</button>
-    <script>
+    <script type="text/javascript">
     	function goBack() {
     		window.history.back();
     	}
+
+        function signupSubmit(){
+                var email = $("#signupEmail").val();
+                var password = $("#signupPassword").val();
+                var firstname = $("#signupFirstname").val();
+
+                if (email && password && firstname) {
+                    var ref = new Firebase("https://bookbulbtheapp.firebaseio.com");
+                    ref.createUser({
+                        email: email,
+                        password: password,
+                        firstname: firstname
+                    }, function (error, userData) {
+                        if (error) {
+                            console.log("Error creating user:", error);
+                            alert("error");
+                        } else {
+                            alert("success");
+                            console.log("Successfully created user account with uid:", userData.uid);
+                        }
+                    });
+
+                } else {
+                    alert("Please fill out all the form fields");
+                }
+        }
     </script>
-    
-    	
 
         <div data-role="footer" class="ui-bar-d" data-position="fixed">
           <div data-role="navbar" data-iconpos="bottom">
           	<ul>
-          		<li><a href="home.html" data-icon="home">Help</a></li>
+          		<li><a href="help.html" data-icon="help">Help</a></li>
               <li><a href="groups.html" data-icon="star">About</a></li>
           	</ul>
           </div>
         </div>
       </div>
-            	<script type="text/javascript" src="js/signup.js"></script>     
+
 
     </body>
 </html>
